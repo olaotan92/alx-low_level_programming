@@ -1,1 +1,1 @@
-This project is for a low level programming language
+This is a project for c programming
