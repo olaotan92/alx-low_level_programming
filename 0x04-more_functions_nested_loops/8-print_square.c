@@ -3,7 +3,7 @@
 * print_square - prints square
 * @size: parameter
 */
-void print_square(int_size)
+void print_square(int size)
 {
 int i = 0, j;
 if (size > 0)
