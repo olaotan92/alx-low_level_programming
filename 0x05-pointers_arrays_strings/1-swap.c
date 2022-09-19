@@ -10,3 +10,4 @@ int tmp = *a;
 *a = *b;
 *b = tmp;
 }
+* swap_int - swaps value
