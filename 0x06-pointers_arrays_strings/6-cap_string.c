@@ -1,27 +1,23 @@
 #include "main.h"
 /**
-* cap_string - capitalises all the letters of a string
-* @s: input string
-* Return: the pointer to dest
+* cap_string - capitalizes every first letter of a word in a string
+* seperators of words are: space, tabulation
+* new line, ,, ;, ., !, ?, ", (, ), {, and }.
+* @s: pointer to string.
+* Return: pointer to s.
 */
 char *cap_string(char *s)
 {
-int count = 0, i;
-int sep_words[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
-if (*(s + count) >= 97 && *(s + count) <= 122)
-*(s + count) = *(s + count) - 32;
-count++;
-while (*(s + count) != '\0')
-for (i = 0; i < 13; i++)
+int count;
+/* scan through string */
+count = 0;
+while (s[count] != '\0')
 {
-if (*(s + count) == sep_words[i])
+/* if next character after count is a char, capitalise it */
+if (s[0] >= 97 && s[0] <= 122)
 {
-if ((*(s + (count + 1)) >= 97) && (*(s + (count + 1)) <= 122))
-*(s + (count + 1)) = *(s + (count + 1)) - 32;
-break;
+s[0] = s[0] - 32;
 }
-}
-count++;
-}
-return (s);
-}
+if (s[count] == ' ' || s[count] == '\t' || s[count] == '\n'
+|| (s[count] == ',' || s[count] == ';' || s[count] == '.'
+|| (s[count] == '.' || s[count] == '!' || s[count] == '?'
