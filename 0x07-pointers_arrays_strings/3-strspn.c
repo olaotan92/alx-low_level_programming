@@ -21,6 +21,7 @@ if (s[i] == accept[j])
 f++;
 flag = 1;
 }
+}
 if (flag == 0)
 {
 return (f);
