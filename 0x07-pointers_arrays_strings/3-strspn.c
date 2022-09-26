@@ -4,7 +4,8 @@
 * @s: string to evaluate
 * @accept: string containing the list of characters to match in s
 *
-* Return: the number of bytes in the initial segment of s which consist only of bytes from accept
+* Return: the number of bytes in the initial segment
+* of s which consist only of bytes from accept
 */
 unsigned int _strspn(char *s, char *accept)
 {
@@ -19,7 +20,6 @@ if (s[i] == accept[j])
 {
 f++;
 flag = 1;
-}
 }
 if (flag == 0)
 {
