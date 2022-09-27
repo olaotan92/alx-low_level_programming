@@ -9,7 +9,7 @@
 * Return: a pointer to the first occurence of the character
 * c, in the string s, or NULL if the character is not found
 */
-char *strchr(char *s, char c)
+char *_strchr(char *s, char c)
 {
 int a;
 while (1)
