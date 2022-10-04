@@ -29,7 +29,7 @@ char *argstostr(int ac, char **av)
 
 	if (aout == NULL)
 	{
-		free (aout);
+		free(aout);
 		return (NULL);
 	}
 
