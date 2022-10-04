@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * *argstostr - concatenates all the arguments of the program
+ * argstostr - concatenates all the arguments of the program
  * @ac: argument count
  * @av: argument vector
  *
@@ -20,12 +20,13 @@ char *argstostr(int ac, char **av)
 	{
 		if (av[i] == NULL)
 			return (NULL);
+
 		for (j = 0; av[i][j] != '\0'; j++)
 			c++;
 		c++;
 	}
 
-	aout = malloc(sizeof(char) * (c + 1));
+	aout = malloc((c + 1) * sizeof(char));
 
 	if (aout == NULL)
 	{
@@ -33,7 +34,7 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	}
 
-	for (i = j = ia = 0; ia < ac; j++, ia++)
+	for (i = j = ia = 0; ia < c; j++, ia++)
 	{
 		if (av[i][j] == '\0')
 		{
