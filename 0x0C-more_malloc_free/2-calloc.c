@@ -7,24 +7,25 @@
  * @size: size of byte of each array element
  *
  * Return: pointer to the allocated memory
+ * if nmemb or size is 0, returns NULL
+ * if malloc fails, returns NULL
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *mem;
-	char *filler;
-	unsigned int index;
+	char *p;
+	unsigned int i;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	mem = malloc(size * nmemb);
+	p = malloc(size * nmemb);
 
-	if (mem == NULL)
+	if (p == NULL)
 		return (NULL);
 
-	filler = mem;
 
-	for (index = 0; index < (size * nmemb); index++)
-		filler[index] = '\0';
-	return (mem);
+	for (i = 0; i < (size * nmemb); i++)
+		p[i] = '\0';
+
+	return (p);
 }
