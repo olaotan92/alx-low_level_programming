@@ -44,8 +44,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	}
 	_memset(p, 0, (nmemb * size));
-	for (i = 0; i < (nmemb * size); i++)
-		p[i] = '\0';
 
 	return (p);
 }
