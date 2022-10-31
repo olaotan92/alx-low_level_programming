@@ -186,7 +186,7 @@ void check_sys(char *ptr)
  * @ptr: magic
  * Return: 1 if it is an elf file, 0 if not
  */
-int check _elf(char *ptr)
+int check_elf(char *ptr)
 {
 	int addr = (int)ptr[0];
 	char E = ptr[1];
